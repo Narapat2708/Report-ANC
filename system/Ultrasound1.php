@@ -8,14 +8,13 @@ ob_start();
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>Gynecological Ultrasound Report</title>
+    <title>Ultrasound1</title>
     <style>
         body {
             font-family: 'LateefRegOT', 'THSarabun', 'Garuda', Arial, sans-serif;
-            margin: 0;
+            margin: 10px;
             padding: 0;
             font-size: 14px;
-            line-height: 1.6;
         }
         .container {
             width: 100%;
@@ -30,41 +29,35 @@ ob_start();
         }
         .logo {
             float: left;
-            width: 80px;
+            width: 130px;
             height: 80px;
             margin-right: 15px;
-        }
-        .logo img {
-            width: 80px;
-            height: 80px;
-            filter: grayscale(100%);
-            -webkit-filter: grayscale(100%);
+            margin-left: 70px;
+            margin-top: -30px;
         }
         .clinic-info {
-            margin-bottom: 8px;
             text-align: left;
             padding-left: 225px;
+            margin-top: -3px;
         }
         .clinic-name {
             font-size: 16px;
             font-weight: bold;
-            margin-bottom: 4px;
-            line-height: 1.4;
+            margin-bottom: -10px;
         }
         .clinic-name-thai {
-            font-size: 14px;
-            margin-bottom: 4px;
-            line-height: 1.4;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: -5px;
         }
         .clinic-address {
-            font-size: 12px;
-            margin-bottom: 4px;
-            line-height: 1.5;
+            font-size: 11px;
         }
         .patient-info {
             margin: 12px 0;
             border-bottom: 4px solid #000;
-            padding-bottom: 8px;
+            padding-bottom: 5px;
+            margin-bottom: -2px;
         }
         .info-row {
             display: flex;
@@ -81,6 +74,7 @@ ob_start();
             position: relative;
             font-size: 12px;
             font-weight: 500;
+            margin-bottom: -5px;
         }
         .info-item:not(:last-child)::after {
             content: "";
@@ -95,27 +89,21 @@ ob_start();
             display: inline-block;
             min-width: 50px;
             margin-right: 5px;
-            line-height: 1.4;
         }
         .section-title {
             text-align: center;
             font-weight: bold;
             font-size: 18px;
-            margin: 15px 0;
-            line-height: 1.4;
         }
         .section {
             margin: 12px 0;
         }
         .section-item {
-            margin-bottom: 10px;
-            line-height: 1.6;
             font-size: 12px;
         }
         .checkbox-group {
             display: inline-block;
             margin-right: 15px;
-            line-height: 1.6;
         }
         .checkbox {
             font-family: 'DejaVu Sans';
@@ -134,15 +122,11 @@ ob_start();
         .input-line-extra-wide {
             width: 100px;
         }
-        .indent {
-            margin-left: 20px;
-            line-height: 1.8;
-        }
         .footer {
             margin-top: 20px;
             text-align: center;
             font-size: 12px;
-            line-height: 1.5;
+            border: 1px solid #000000ff;
         }
         .sub-section {
             margin-left: 20px;
@@ -164,6 +148,15 @@ ob_start();
             gap: 10px;
             margin-top: 5px;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 0.1px solid #000;
+            padding: 3px;
+            vertical-align: top;
+        }
     </style>
 </head>
 <body>
@@ -171,13 +164,13 @@ ob_start();
     <!-- ส่วนหัว -->
     <div class="header">
         <div class="logo">
-            <img src="Ginalogo.jpg" alt="Gina Clinic Logo">
+            <img src="LogoGina.png" alt="Gina Clinic Logo">
         </div>
         <div class="clinic-info">
-            <div class="clinic-name">GINA SURIN DUANCPHICHATBUT CLINIC Co.Ltd.</div>
-            <div class="clinic-name-thai">บริษัท ซีปาลูวินทร์ ดวงหัวหนุนธร คลินิก จํากัด</div>
+            <div class="clinic-name">GINA SURIN DUANGPHICHATBUT CLINIC Co.Ltd.</div>
+            <div class="clinic-name-thai">บริษัท จีน่าสุรินทร์ ดวงภิชาตบุตร คลินิก จากัด</div>
             <div class="clinic-address">
-                2011 ถนนแหล่งบาท 2 ตําบลในเมือง 5 ตําบลเมืองผู้ใหญ่ ปีงบประมาณที่ 23000<br>
+                551/1 ถนนเทศบาล 1 ตาบลในเมือง อาเภอเมืองสุรินทร์ จังหวัดสุรินทร์ 32000<br>
                 ประเทศไทย Tel. 098-458-9994
             </div>
         </div>
@@ -230,7 +223,7 @@ ob_start();
         <!-- Myoma uteri -->
         <div class="section-item">
             <span class="checkbox-group"><span class="checkbox">&#x2610;</span> Myoma uteri</span>
-            <div class="indent">
+            <div>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Size <span class="input-line"></span>……x……<span class="input-line"></span> cm. Type: 
                 <span class="checkbox-group"><span class="checkbox">&#x2610;</span> submucous</span>
                 <span class="checkbox-group"><span class="checkbox">&#x2610;</span> Intramural</span>
@@ -292,147 +285,11 @@ ob_start();
             Functional cyst, corpus luteum cyst, endometriotic cyst, dermoid cyst
         </div>
     </div>
-
-    <!-- หมายเหตุ -->
-    <div class="footer">
-        <strong>หมายเหตุ:</strong> รูปจะกําหนดได้ว่าจะได้คุ้ม!
-    </div>
-
-    <!-- หน้า 2: Obstetric Ultrasound -->
-    <div style="page-break-before: always;">
-        <!-- ส่วนหัว (เหมือนเดิม) -->
-        <div class="header">
-            <div class="logo">
-                <img src="Ginalogo.jpg" alt="Gina Clinic Logo">
-            </div>
-            <div class="clinic-info">
-                <div class="clinic-name">GINA SURIN DUANCPHICHATBUT CLINIC Co.Ltd.</div>
-                <div class="clinic-name-thai">บริษัท ซีปาลูวินทร์ ดวงหัวหนุนธร คลินิก จํากัด</div>
-                <div class="clinic-address">
-                    2011 ถนนแหล่งบาท 2 ตําบลในเมือง 5 ตําบลเมืองผู้ใหญ่ ปีงบประมาณที่ 23000<br>
-                    ประเทศไทย Tel. 098-458-9994
-                </div>
-            </div>
-        </div>
-
-        <!-- ข้อมูลผู้ป่วย (เหมือนเดิม) -->
-        <div class="patient-info">
-            <div class="info-row">
-                <div class="info-item">
-                    <span class="info-label">Name (F)</span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="info-label">Age</span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="info-label">D.O.B.</span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="info-label">CN</span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="info-label">สัญชาติไทย/อื่นๆ.............</span>
-                    <span class="info-label">เชื้อชาติไทย/อื่นๆ............</span>
-                </div>
-            </div>
-            <div class="info-row">
-                <div class="info-item">
-                    <span class="info-label">Physician</span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="info-label">INF. No.</span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="info-label">Location</span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="info-label">LMP.................</span>
-                    <span class="info-label">BW...........</span>
-                    <span class="info-label">BP...........</span>
-                    <span class="info-label">HR...........</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- รายงานผลอัลตราซาวด์ทางสูติกรรม -->
-        <div class="section-title">Obstetric ultrasound</div>
-
-        <!-- First Trimester Ultrasound -->
-        <div class="section">
-            <div class="section-title" style="font-size: 16px; margin: 10px 0;">First Trimester ultrasound</div>
-            
-            <div class="section-item">
-                <strong>CRL</strong> <span class="input-line input-line-extra-wide"></span> mm., 
-                <strong>GA</strong> <span class="input-line input-line-extra-wide"></span> weeks, 
-                <strong>EDC</strong> <span class="input-line input-line-extra-wide"></span>
-            </div>
-
-            <div class="section-item">
-                <strong>Uterine mass:</strong>
-                <span class="checkbox-group"><span class="checkbox">&#x2610;</span> No</span>
-                <span class="checkbox-group"><span class="checkbox">&#x2610;</span> Yes</span>
-            </div>
-
-            <div class="section-item">
-                <strong>Adnexal mass:</strong>
-                <span class="checkbox-group"><span class="checkbox">&#x2610;</span> No</span>
-                <span class="checkbox-group"><span class="checkbox">&#x2610;</span> Yes</span>
-            </div>
-        </div>
-
-        <!-- Second & Third Trimester Ultrasound -->
-        <div class="section">
-            <div class="section-title" style="font-size: 16px; margin: 10px 0;">Second & Third Trimester Ultrasound</div>
-            
-            <div class="two-column">
-                <div class="column">
-                    <div class="section-item">
-                        <strong>BPD</strong> <span class="input-line"></span> wk
-                    </div>
-                    <div class="section-item">
-                        <strong>HC</strong> <span class="input-line"></span> wk
-                    </div>
-                    <div class="section-item">
-                        <strong>AC</strong> <span class="input-line"></span> wk
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="section-item">
-                        <strong>FL</strong> <span class="input-line"></span> wk
-                    </div>
-                    <div class="section-item">
-                        <strong>EFW</strong> <span class="input-line input-line-extra-wide"></span> g
-                    </div>
-                    <div class="section-item">
-                        <strong>Greenville (0-50), ATI</strong> <span class="input-line"></span> cm.
-                    </div>
-                </div>
-            </div>
-
-            <div class="section-item">
-                <strong>EDC</strong> <span class="input-line input-line-extra-wide"></span>
-            </div>
-
-            <!-- Placenta -->
-            <div class="section-item placenta-location">
-                <strong>Placenta:</strong>
-                <div class="location-options">
-                    <span class="checkbox-group"><span class="checkbox">&#x2610;</span> Anterior</span>
-                    <span class="checkbox-group"><span class="checkbox">&#x2610;</span> Posterior</span>
-                    <span class="checkbox-group"><span class="checkbox">&#x2610;</span> Upper</span>
-                    <span class="checkbox-group"><span class="checkbox">&#x2610;</span> Middle</span>
-                    <span class="checkbox-group"><span class="checkbox">&#x2610;</span> Lower</span>
-                    <span class="checkbox-group"><span class="checkbox">&#x2610;</span> Previa</span>
-                </div>
-            </div>
-
-            <div class="section-item">
-                <strong>Sensibucant line:</strong>
-                <span class="checkbox-group"><span class="checkbox">&#x2610;</span> Yes</span>
-                <span class="checkbox-group"><span class="checkbox">&#x2610;</span> No</span>
-            </div>
-
-            <div class="section-item">
-                <strong>Other:</strong> <span class="input-line" style="width: 300px;"></span>
-            </div>
-        </div>
-
-        <!-- หมายเหตุ -->
         <div class="footer">
-            <strong>หมายเหตุ:</strong> รูปจะกําหนดได้ว่าจะได้คุ้ม!
+            <table>
+                <tr><th style="height:350px"></th>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
