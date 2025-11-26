@@ -16,6 +16,7 @@ ob_start();
             padding: 0;
             font-size: 14px;
         }
+        
         .container {
             width: 100%;
             padding: 10px;
@@ -94,9 +95,11 @@ ob_start();
             text-align: center;
             font-weight: bold;
             font-size: 18px;
+            margin-top: 20px; /* เพิ่มระยะห่างจากเส้นดำด้านบน */
+            margin-bottom: -5px;
         }
         .section {
-            margin: 12px 0;
+            margin: -10px 0;
         }
         .section-item {
             font-size: 12px;
@@ -122,12 +125,6 @@ ob_start();
         .input-line-extra-wide {
             width: 100px;
         }
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 12px;
-            border: 1px solid #000000ff;
-        }
         .sub-section {
             margin-left: 20px;
             margin-bottom: 15px;
@@ -149,13 +146,18 @@ ob_start();
             margin-top: 5px;
         }
         table {
-            width: 100%;
+            width: 90%;
             border-collapse: collapse;
+            margin: 0 auto; /* เพิ่มการจัดกึ่งกลาง */
         }
         td, th {
             border: 0.1px solid #000;
             padding: 3px;
             vertical-align: top;
+        }
+        .table-container {
+            text-align: center; /* เพิ่มการจัดกึ่งกลาง */
+            margin: 0 auto; /* เพิ่มการจัดกึ่งกลาง */
         }
     </style>
 </head>
@@ -285,12 +287,14 @@ ob_start();
             Functional cyst, corpus luteum cyst, endometriotic cyst, dermoid cyst
         </div>
     </div>
-        <div class="footer">
-            <table>
-                <tr><th style="height:350px"></th>
-                </tr>
-            </table>
-        </div>
+    <br>
+    <!-- ส่วนตารางที่จัดกึ่งกลาง -->
+    <div class="table-container">
+        <table>
+            <tr>
+                <th style="height:350px"></th>
+            </tr>
+        </table>
     </div>
 </div>
 </body>
